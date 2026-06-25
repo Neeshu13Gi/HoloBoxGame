@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Fruit Ninja — Hand Tracking</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="layout">
+        <main id="game-area">
+          <div id="game-container"></div>
+
+          <div id="hud">
+            <div class="hud-row">
+              <div class="hud-item">
+                <span class="hud-label">Score</span>
+                <span id="score" class="hud-value">0</span>
+              </div>
+              <div class="hud-item">
+                <span class="hud-label">Lives</span>
+                <span id="lives" class="hud-value">❤️❤️❤️❤️❤️</span>
+              </div>
+              <div class="hud-item">
+                <span class="hud-label">Combo</span>
+                <span id="combo" class="hud-value">x1</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="game-over-screen" class="overlay hidden">
+            <h1>Game Over</h1>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <p id="game-over-reason"></p>
+            <button id="restart-btn">Play Again</button>
+          </div>
+
+          <div id="camera-float">
+            <div class="video-frame">
+              <video id="webcam" autoplay playsinline muted></video>
+              <canvas id="webcam-overlay"></canvas>
+              <div id="video-placeholder" class="video-placeholder">
+                <span id="loading-text">Loading camera…</span>
+              </div>
+            </div>
+            <div id="hand-status" class="hand-status">
+              <span id="hand-status-text">Waiting…</span>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
