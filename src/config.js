@@ -52,7 +52,7 @@ export const CONFIG = {
     FRUITS: {
     apple: { radius: 0.55, color: 0xd62828, score: 10, juiceColor: 0xff3344 },
     orange: { radius: 0.5, color: 0xff8c1a, score: 15, juiceColor: 0xff9922 },
-    banana: { radius: 0.45, color: 0xffd93d, score: 20, juiceColor: 0xffee88 },
+    banana: { radius: 0.5, color: 0xffd93d, score: 20, juiceColor: 0xffee88 },
     watermelon: { radius: 0.75, color: 0x2d6b2d, score: 25, juiceColor: 0xff2244 },
   },
 

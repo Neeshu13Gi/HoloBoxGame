@@ -184,11 +184,15 @@ function drawSliceFace(type, ctx, size) {
   } else if (type === 'banana') {
     const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
     g.addColorStop(0, '#fff8dc');
-    g.addColorStop(0.65, '#ffe680');
+    g.addColorStop(0.5, '#ffe680');
     g.addColorStop(1, '#e8c040');
     ctx.fillStyle = g;
     ctx.beginPath();
-    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.ellipse(cx, cy, r * 0.85, r, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = 'rgba(90,55,20,0.35)';
+    ctx.beginPath();
+    ctx.ellipse(cx - r * 0.15, cy + r * 0.1, r * 0.12, r * 0.06, -0.4, 0, Math.PI * 2);
     ctx.fill();
   } else if (type === 'watermelon') {
     ctx.fillStyle = '#eef8ee';
@@ -247,11 +251,12 @@ export function createAppleProfile(radius) {
 
 export function createBananaCurve() {
   return new THREE.CatmullRomCurve3([
-    new THREE.Vector3(-0.44, -0.2, 0.02),
-    new THREE.Vector3(-0.2, 0, 0.05),
-    new THREE.Vector3(0.05, 0.2, 0.04),
-    new THREE.Vector3(0.28, 0.24, 0.01),
-    new THREE.Vector3(0.46, 0.06, -0.03),
-    new THREE.Vector3(0.52, -0.1, -0.05),
+    new THREE.Vector3(-0.5, -0.22, 0),
+    new THREE.Vector3(-0.28, -0.05, 0.03),
+    new THREE.Vector3(-0.05, 0.12, 0.05),
+    new THREE.Vector3(0.18, 0.26, 0.03),
+    new THREE.Vector3(0.38, 0.22, 0),
+    new THREE.Vector3(0.52, 0.08, -0.02),
+    new THREE.Vector3(0.58, -0.08, -0.04),
   ]);
 }

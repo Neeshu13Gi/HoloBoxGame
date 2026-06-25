@@ -19,6 +19,7 @@ export class SceneManager {
     this.renderer.toneMappingExposure = 1.05;
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.renderer.localClippingEnabled = true;
     container.appendChild(this.renderer.domElement);
 
     const aspect = this.width / this.height;
